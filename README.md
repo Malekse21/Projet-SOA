@@ -42,7 +42,7 @@ Pour éviter les blocages de sécurité des navigateurs (erreurs CORS), je recom
 3.  Collez-les dans le dossier `src/main/webapp` de votre projet Backend sur Eclipse.
 4.  Lancez (ou redémarrez) le serveur Tomcat.
 5.  Ouvrez votre navigateur sur :
-    👉 `http://localhost:8082/Projet-SOA/index.html`
+    👉 `localhost:8082/projetSOA/`
 
 ## 🎥 Démo Vidéo
 J'ai enregistré une courte vidéo pour montrer le code et tester toutes les fonctionnalités en direct :
