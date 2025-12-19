@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Management</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="text-center mb-5 fw-bold">
+                    <i class="fas fa-users-cog me-3"></i>Person Management (REST Client)
+                </h2>
+
+                <!-- Search Section -->
+                <div class="card mb-4">
+                    <div class="card-body p-4">
+                        <div class="row g-3 align-items-end">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold"><i class="fas fa-search me-2"></i>Search by name</label>
+                                <input type="text" id="searchInput" class="form-control" placeholder="Enter name...">
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-primary w-100" onclick="searchPerson()">
+                                    <i class="fas fa-search me-2"></i>Search
+                                </button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-secondary w-100" onclick="loadPersons()">
+                                    <i class="fas fa-sync-alt me-2"></i>Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="fas fa-user-plus me-3"></i>Add / Update Person</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <input type="hidden" id="personId">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter full name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="example@domain.com">
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-success btn-lg px-5" onclick="savePerson()">
+                                    <i class="fas fa-save me-2"></i>Save Person
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="fas fa-table me-3"></i>List of Persons</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="personTable">
+                                    <!-- Rows injected by app.js -->
+                                </tbody>
+                            </table>
+                            <div id="emptyMessage" class="text-center py-5 text-muted" style="display: none;">
+                                <i class="fas fa-inbox fa-3x mb-3"></i>
+                                <p class="fs-4">No persons found. Add one above!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your existing app.js (keep it unchanged) -->
+    <script src="js/app.js"></script>
+
+    <!-- Optional: Show empty message when table is empty -->
+    <script>
+        const originalLoadPersons = loadPersons;
+        loadPersons = function() {
+            originalLoadPersons();
+            setTimeout(() => {
+                const table = document.getElementById("personTable");
+                const emptyMsg = document.getElementById("emptyMessage");
+                if (table.children.length === 0) {
+                    emptyMsg.style.display = "block";
+                } else {
+                    emptyMsg.style.display = "none";
+                }
+            }, 300);
+        };
+        loadPersons(); // Initial load
+    </script>
+</body>
+</html>
