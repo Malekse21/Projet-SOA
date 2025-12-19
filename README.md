@@ -46,7 +46,7 @@ Pour éviter les blocages de sécurité des navigateurs (erreurs CORS), je recom
 
 ## 🎥 Démo Vidéo
 J'ai enregistré une courte vidéo pour montrer le code et tester toutes les fonctionnalités en direct :
- **[COLLER VOTRE LIEN YOUTUBE ICI]**
+ **Lien**
 
 ---
 **Réalisé par :**
