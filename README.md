@@ -29,7 +29,7 @@ L'application couvre toutes les fonctionnalités demandées :
 
 ### Prérequis
 Assurez-vous que votre Backend (le projet JAX-RS sur Eclipse) tourne bien sur **Tomcat (port 8082)**.
-*   *URL de l'API attendue :* `http://localhost:8082/Projet-SOA/api/persons`
+*   *URL de l'API attendue :* `localhost:8082/projetSOA/`
 
 ### Installation rapide
 Pour éviter les blocages de sécurité des navigateurs (erreurs CORS), je recommande de lancer le frontend directement depuis le serveur :
