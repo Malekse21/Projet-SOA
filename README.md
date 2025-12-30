@@ -1,4 +1,4 @@
-# 🌐 Projet SOA : Gestion des Personnes
+# 🌐 Projet SOA : Gestion des Etudiants
 
 Bienvenue sur le dépôt de notre projet SOA !
 Ce projet a été réalisé dans le cadre du module **SOA (Service Oriented Architecture)**. L'objectif était de créer une interface web capable de dialoguer avec notre backend Java (JAX-RS) développé précédemment.
@@ -46,7 +46,7 @@ Pour éviter les blocages de sécurité des navigateurs (erreurs CORS), je recom
 
 ## 🎥 Démo Vidéo
 J'ai enregistré une courte vidéo pour montrer le code et tester toutes les fonctionnalités en direct :
- **Lien**
+ **[Lien](https://drive.google.com/file/d/1zWF8_mp6au_Zt6ZRFpMY-cJxPpIVdfSG/view?usp=sharing)**
 
 ---
 **Réalisé par :**
