@@ -50,6 +50,5 @@ J'ai enregistré une courte vidéo pour montrer le code et tester toutes les fon
 
 ---
 **Réalisé par :**
-*   **Projet SOA - Groupe 21**
-*   *Sandra Abbes | TP6
-*   *Malek Setti | TP8
+*   Sandra Abbes | TP6
+*   Malek Setti | TP8
